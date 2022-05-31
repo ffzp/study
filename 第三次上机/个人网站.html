@@ -1,0 +1,89 @@
+<html>
+<head>
+    <title>欢迎来到fzp的网站</title>
+    <SCRIPT Language = "JavaScript">
+     function chg(color)
+     {
+     document.bgColor=color ;
+     }
+    </SCRIPT>
+</head>
+<body>
+    <H1><center>欢迎来到fzp的网站</center></H1>
+    <hr color='black'>
+    <p>网站导航：</p>
+    <a href="我的照片.html">我的照片</a>
+    <a href="自我介绍.html">自我介绍</a>
+    <a href="我的收藏.html">我的收藏</a>
+    <a href="我的爱好.html">我的爱好</a>
+    <a href="我的好友.html">我的好友</a>
+	<br>
+    <img src="https://s2.loli.net/2022/05/17/H3Vd7JfWUeP2hE6.jpg" width="800" alt="我的女朋友">
+        <script> //实时显示时间
+            function show(){
+                var date = new Date();
+                var year = date.getFullYear();
+                var month = date.getMonth()+1;
+                month=month<10?"0"+month:month;
+                var day = date.getDate();
+                day=day<10?"0"+day:day;
+                var week = date.getDay();
+                switch(week){
+                    case 1:{
+                        week="星期一";
+                        break;
+                    }
+                    case 2:{
+                        week="星期二";
+                        break;
+                    }
+                    case 3:{
+                        week="星期三";
+                        break;
+                    }
+                    case 4:{
+                        week="星期四";
+                        break;
+                    }
+                    case 5:{
+                        week="星期五";
+                        break;
+                    }
+                    case 6:{
+                        week="星期六";
+                        break;
+                    }
+                    case 0:{
+                        week="星期日";
+                        break;
+                    }				
+                }
+                var hour = date.getHours();
+                hour= hour<10?"0"+ hour: hour;
+                var minute = date.getMinutes();
+                minute=minute<10?"0"+minute:minute;
+                var second = date.getSeconds();
+                second=second<10?"0"+second:second;
+                var result = year+"."+month+"."+day+" "+week+" "+hour+":"+minute+":"+second ;
+                document.getElementById("time").innerHTML = result;
+            }
+            show();
+            setInterval("show()",1000);
+        </script>   
+        <p>想看到我的代码吗？源码在这个网址：</p> 
+        <a href="www.baidu.com">www.baidu.com</a>
+        <div>
+            作者：费智鹏 &#8195;&#8195;学校：华中科技大学 &#8195;&#8195;个人邮箱：2931221930@qq.com
+            <br>
+        </div>
+        <table border="0" width="27%" id="table2" cellspacing="0" cellpadding="0"> 
+            <tr> <td height="25">&nbsp;&nbsp;
+            <input type="button" value="蓝色背景" onClick="chg('blue')">
+            <input type="button" value="绿色背景" onClick="chg('green')">
+            <input type="button" value="默认背景" onClick="chg('white')">
+            <input type="button" value="关闭窗口" onClick=window.close()> 
+            </td></tr>
+        </table>
+            <span id="time"></span>            
+</body>
+</html>
